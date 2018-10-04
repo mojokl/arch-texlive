@@ -20,5 +20,5 @@ RUN git clone https://aur.archlinux.org/texlive-localmanager-git.git && \
 
 WORKDIR /build
 
-ENTRYPOINT bash
+ENTRYPOINT ./build.sh
 
