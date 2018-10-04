@@ -1,7 +1,8 @@
 FROM archimg/base-devel
 
 RUN pacman --noconfirm -Sy
-RUN pacman --noconfirm -S git biber $(pacman -Sqs texlive-)
+RUN pacman --noconfirm -S git biber
+RUN pacman --noconfirm -S $(pacman -Sqs texlive-)
 
 WORKDIR /tmp
 
@@ -17,6 +18,8 @@ RUN git clone https://aur.archlinux.org/perl-term-shellui.git && \
 RUN git clone https://aur.archlinux.org/texlive-localmanager-git.git && \
     cd texlive-localmanager-git && \
     makepkg --noconfirm -si
+
+ENV PATH="/usr/bin/vendor_perl:${PATH}"
 
 WORKDIR /build
 

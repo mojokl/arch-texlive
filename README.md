@@ -9,7 +9,7 @@ project that is executable and provides instructions to build your project.
 
 Then run this command in the directory containing the `build.sh`:
 
-`docker run --name myproject -it -v $(pwd):/build djesionek/ubuntu-texlive`
+`docker run --name myproject -it -v $(pwd):/build djesionek/arch-texlive`
 
 This will create the container `myproject`, that calls your `build.sh` and
 compiles your project as specified there.
