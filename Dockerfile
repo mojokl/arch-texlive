@@ -1,7 +1,7 @@
 FROM archimg/base-devel
 
 RUN pacman --noconfirm -Sy
-RUN pacman --noconfirm -S git biber
+RUN pacman --noconfirm -S git biber bash
 RUN pacman --noconfirm -S $(pacman -Sqs texlive-)
 
 WORKDIR /tmp
